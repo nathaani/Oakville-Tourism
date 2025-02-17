@@ -1,0 +1,223 @@
+body,
+h1,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Hero Banner */
+.hero-banner {
+    box-sizing: border-box;
+
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    width: 100%;
+    height: 600px;
+    background-image: url('../img/activity/aHeaderPic.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* make back pic darker */
+.hero-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    /* Black background with 50% opacity */
+    z-index: 1;
+}
+
+.hero-banner * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.logo {
+    position: absolute;
+    top: 5%;
+    /* Adjust the top position as needed */
+    left: 2%;
+    /* Adjust the left position as needed */
+    width: 20%;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Navigation Bar */
+.navigation-bar a {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+.navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    padding: 0px 0px;
+}
+
+/* oakville.ca */
+.official {
+    font-weight: bold;
+}
+
+/* ACTIVITY */
+.title {
+    display: flex;
+    flex-direction: column;
+    /* Change this to column */
+    align-items: flex-start;
+    /* Change this to flex-start */
+    margin-top: 15%;
+    padding-left: 10%;
+}
+
+.title h1 {
+    font-size: 300%;
+}
+
+.title p {
+    align-self: flex-start;
+    /* Add this to align the p tag to the left */
+    width: 40%;
+    text-align: left;
+    font-size: 12px;
+    padding-top: 2%;
+}
+
+/* share icons */
+.share {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: -100px;
+}
+
+.share img {
+    width: 20%;
+    height: auto;
+    margin: 10px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+ul li {
+    margin-right: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+
+
+/* carousel start */
+
+.carousel {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-image {
+    z-index: 2;
+
+    position: absolute;
+    text-align: center;
+    margin-top: -6%;
+    /* active up */
+    opacity: 0;
+}
+
+.carousel-image.active {
+    opacity: 1;
+    margin-bottom: 10%;
+    width: 47%;
+    height: auto;
+}
+
+.thumbnails {
+    position: relative;
+
+    z-index: 5;
+
+    padding-top: 26%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.thumbnail {
+    z-index: 3;
+    width: 9.3%;
+    height: auto;
+    margin: 0px;
+    padding: 0cqmax;
+    border: 2px solid #fff;
+}
+
+
+/* explore start */
+
+h2 {
+    font-size: 180%;
+    text-align: center;
+}
+
+
+
+.itemName {
+    position: relative;
+    bottom: 21%;
+    left: 14%;
+    font-size: 22px;
+    text-align: left;
+    color: white;
+   
+}
+
+.location {
+    position: relative;
+    bottom: 17%;
+    left: 14%;
+    font-size: 18px;
+    text-align: left;
+    color: white;
+
+}
+
+.explore {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1ch;
+    text-align: center;
+
+}
+
+.item {
+    margin-bottom: 1ch; /* Adjust this value to control the vertical gap between items */
+}
+
+.item img {
+    width: 100%; /* Make sure images fill the grid cells */
+    height: auto; /* Maintain aspect ratio */
+    
+}

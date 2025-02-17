@@ -1,0 +1,415 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+textarea,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling */
+body {
+  font-family: "Arial", sans-serif;
+}
+
+/* Hero Banner */
+.hero-banner {
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+  height: 300px;
+  background-image: url("../img/home/homebanner.jpeg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.hero-banner * {
+  position: relative;
+  z-index: 2;
+}
+
+.whiteLogo {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 20%;
+  height: auto;
+}
+
+/* Navigation Bar */
+.navigation-bar {
+  background: #ffffff;
+  color: #0a0606;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 15px 15px;
+}
+
+.logo {
+  width: 100px;
+  padding-left: 50px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+ul li {
+  margin-right: 20px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.search-bar {
+  display: flex;
+}
+
+.search-bar input {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Activity Tiles */
+.activity-tiles {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin: 50px 0;
+  flex-wrap: wrap;
+}
+
+.activity {
+  text-align: center;
+  flex-basis: calc(25% - 20px);
+  margin: 10px;
+  position: relative;
+}
+
+.activity img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  aspect-ratio: 4/5;
+}
+
+.activity h2 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.divider {
+  position: relative;
+  width: 50px;
+  height: 2px;
+  background: #000000;
+  margin: 10px auto 0;
+}
+
+.justText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10%;
+  height: 100px;
+  padding-top: -200px;
+  margin-top: -200px;
+}
+
+.justText p {
+  margin: 0;
+  font-size: 30px;
+}
+
+.justText button {
+  margin-top: 50px;
+  height: 60px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3498db;
+  color: #fff;
+  border: 500px;
+  cursor: pointer;
+}
+
+.actbut {
+  margin-top: 20px;
+  height: 40px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3498db;
+  color: #fff;
+  border: 50px;
+  cursor: pointer;
+}
+
+/* Full-width Banner with Map */
+.full-width-banner {
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  width: 100%;
+  height: 80vh;
+}
+
+.carousel-container {
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+}
+
+.banner-slide {
+  z-index: 2;
+  position: absolute;
+  text-align: center;
+  margin-top: -6%;
+  opacity: 0;
+  width: 100%;
+  height: auto;
+}
+
+.banner-slide.active {
+  opacity: 1;
+  margin-bottom: 10%;
+}
+
+.thumbnails {
+  position: absolute;
+  z-index: 5;
+  bottom: 5%;
+  right: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.thumbnail {
+  z-index: 3;
+  width: 100px;
+  height: auto;
+  margin: 0px 5px;
+  padding: 0;
+  border: 2px solid #fff;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.thumbnail.active {
+  opacity: 1;
+}
+
+.banner-text {
+  position: absolute;
+  color: #fff;
+  font-size: larger;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 2;
+}
+
+/* Pop up banner */
+.shadow-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+  position: relative;
+  height: 500px;
+}
+
+.shadow-banner::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: calc(100% - 500px);
+  height: calc(100% - 40px);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+
+.text-description {
+  max-width: 800px;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.images img {
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 10px;
+}
+.end-banner {
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+  position: relative;
+  height: 700px;
+}
+
+.backgroundImage {
+  position: relative;
+}
+
+.backgroundImage img {
+  width: 100%;
+  height: auto;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  max-width: 80%;
+  text-align: left;
+}
+
+.banner-text h2,
+.banner-text p {
+  margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 900px) {
+  .hero-banner {
+    height: 200px;
+  }
+
+  .logo{
+    opacity: 0%;
+    height: 0px;
+  }
+  .activity-tiles {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin: 0px 0;
+    flex-wrap: wrap;
+  }
+  .search-bar {
+    padding: 10px;
+  }
+
+  .whiteLogo {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    left: 0%;
+  }
+  .navigation-bar {
+    padding: 15px 10px;
+    display: block;
+    padding-bottom: 5px;
+  }
+
+  .activity {
+    flex-basis: calc(50% - 20px);
+  }
+
+  .justText {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 0px;
+    margin-top: 0px;
+
+  }
+
+  .justText p {
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 0px;
+
+    padding-left: 0px;
+    font-size: 20px;
+    padding-top: 0px;
+  }
+
+  .justText button {
+    margin-top: 0px;
+  }
+
+  .full-width-banner {
+    height: 60vh;
+  }
+
+  .banner-text {
+    padding-left: 5%;
+  }
+
+  .shadow-banner {
+    height: 300px;
+  }
+
+  .shadow-banner::before {
+    width: calc(100% - 20px);
+    height: calc(100% - 40px);
+  }
+
+  .images img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.login h2,
+form,
+p,
+a {
+  padding-left: 10%;
+  padding-right: 5%;
+}
+
+.login h2,
+p,
+a {
+  padding-top: 5%;
+}
